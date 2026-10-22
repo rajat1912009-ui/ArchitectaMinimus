@@ -1,0 +1,29 @@
+{
+  "services": [
+    "battle_detect"
+  ],
+  "sequence": [
+    {
+      "loop": {
+        "count": "forever",
+        "do": [
+          {"click": [434, 865]},
+          {"sleep": [0.5]},
+          {"click": [434, 865]},
+          {"battle": []},
+          {
+            "while": {
+              "condition": {
+                "result": "battle_detect",
+                "equals": true
+              },
+              "do": [
+                {"battle": []}
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "services": [
+    "battle"
+  ],
+  "sequence": [
+    {
+      "loop": {
+        "count": "forever",
+        "do": [
+          {"click": [434, 865]},
+          {"sleep": [0.5]},
+          {"click": [434, 865]},
+          {"sleep": [0.5]}
+        ]
+      }
+    }
+  ]
+}
