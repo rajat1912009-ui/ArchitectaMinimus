@@ -1,0 +1,57 @@
+
+
+{
+  "instructions": {
+    "loop": {
+      "handler": "execute_loop"
+    },
+    "if": {
+      "handler": "execute_condition"
+    },
+    "expect": {
+      "handler": "execute_expect"
+    },
+    "wait": {
+      "handler": "execute_wait"
+    },
+    "exit": {
+      "handler": "execute_exit"
+    },
+    "sleep": {
+      "handler": "execute_sleep"
+    },
+    "while": {
+      "handler": "execute_while"
+    }
+  },
+  "actions": {
+    "click": {
+      "handler": "run_task",
+      "target": "toolbox/clicker.sh"
+    },
+    "battle": {
+      "handler": "run_task",
+      "target": "toolbox/battle.py"
+    },
+    "detect_chapter": {
+      "handler": "run_task",
+      "target": "toolbox/detect_chapter.py"
+    }
+  },
+  "services": {
+    "battle": {
+      "target": "toolbox/battle.py",
+      "commands": {
+        "stop": "STOP"
+      }
+    },
+    "battle_detect": {
+      "target": "toolbox/battle_detector.py",
+      "commands": {
+        "enable": "ENABLE",
+        "disable": "DISABLE",
+        "stop": "STOP"
+      }
+    }
+  }
+}
